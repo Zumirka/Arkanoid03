@@ -21,7 +21,7 @@ import static android.R.attr.onClick;
  */
 
 public class GameView extends View {
-
+//tesc
 
     private SpriteObject character;
     private Context context;
