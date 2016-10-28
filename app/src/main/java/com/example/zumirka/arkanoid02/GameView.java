@@ -21,9 +21,11 @@ import static android.R.attr.onClick;
  */
 
 public class GameView extends View {
-//tesc
 
+
+    private Rectangle character2;
     private SpriteObject character;
+    private Platform platform;
     private Context context;
     long startTime = 0;
     private int move=5;
@@ -34,8 +36,11 @@ public class GameView extends View {
         super(context);
         this.context = context;
         character = new SpriteObject(500,100);
+        character2 = new Rectangle(1000, 180, 100, 1900);
+
         character.setMove_x(5);
         character.setMove_y(5);
+        platform = new Platform(7,0,60,400);
 
         // this.setOnClickListener(this);
 
@@ -57,6 +62,8 @@ public class GameView extends View {
         CheckColision();
         character.draw(c);
         invalidate();
+        character2.draw(c);
+        platform.draw(c);
         // character.draw(c);
 
     }
